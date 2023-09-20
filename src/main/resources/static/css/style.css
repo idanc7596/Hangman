@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+
+body {
+    font-family: sans-serif;
+    font-size: 1em;
+    /*background-image: url('../images/background.svg');*/
+    background-color: aliceblue;
+    height: 100%;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

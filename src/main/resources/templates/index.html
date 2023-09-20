@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:insert="fragments/head.html :: head"></head>
+
+<body>
+
+    <nav th:insert="fragments/navbar.html :: nav"></nav>
+
+    <div class="container">
+
+        <section class="d-flex justify-content-center mt-3">
+            <div class="row">
+                <img class="img-fluid" src="" th:src="@{/images/frames/{frame}.jpg(frame=${misses})}" alt="hangman" />
+            </div>
+        </section>
+
+        <section class="d-flex justify-content-center mt-3">
+            <div class="row">
+                <h1><span th:text="${category}" class="badge"
+                          style="background-color: #821bb7"></span></h1>
+            </div>
+        </section>
+
+        <section class="d-flex justify-content-center mt-3">
+            <div class="row">
+                <h1 class="display-1 text-center"
+                    style="font-family: 'Nanum Pen Script', cursive; font-size: 6em">
+                    <span th:each="letter : ${revealedWord}" th:text="${letter}"></span>
+                </h1>
+            </div>
+        </section>
+
+        <section class="d-flex justify-content-center mt-3">
+            <div class="row d-flex justify-content-center">
+                <div class="col-10">
+                    <div class="row d-flex justify-content-center g-1">
+                        <form th:each="letter : ${keyboard.entrySet()}"
+                              action="#" th:action="@{/game/guess/{key}(key=${letter.getKey()})}" method="post" style="width: 14%">
+                            <button type="submit" th:text="${letter.getKey()}"
+                                    th:class="${letter.getValue() == 'blue' ? 'btn btn-outline-primary' :
+                                (letter.getValue() == 'green' ? 'btn btn-success disabled' :
+                                'btn btn-danger disabled')} + ' col-12 p-2'"/>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </div>
+
+</body>
+</html>

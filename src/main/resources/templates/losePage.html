@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:insert="fragments/head.html :: head"></head>
+
+<body>
+
+<nav th:insert="fragments/navbar.html :: nav"></nav>
+
+<div class="container">
+  <div class="row mt-3">
+    <div class="col-12 d-flex justify-content-center">
+      <img class="img-fluid" src="/images/loseMessage.jpg" alt="loseMessage" />
+    </div>
+    <div class="col-12 d-flex justify-content-center mt-3">
+      <a class="fs-3" th:href="@{/game}">Back to game</a>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:insert="fragments/head.html :: head"></head>
+
+<body>
+    <nav th:insert="fragments/navbar.html :: nav"></nav>
+
+    <div class="container d-flex justify-content-center">
+        <div class="row text-center mt-5">
+            <p class="col-12 display-2 fw-bold text-danger">oops... 😵</p>
+            <p class="col-12 display-5">Looks like something went wrong!</p>
+            <p class="col-12 display-6" th:text="${errorMessage}"></p>
+            <p class="col-12 mt-2">
+                <img class="img-fluid" src="/images/error.gif" alt="error" />
+            </p>
+            <a class="col-12 fs-4 mt-4" th:href="@{/game}">Back to game</a>
+        </div>
+    </div>
+
+</body>
+
+</html>
