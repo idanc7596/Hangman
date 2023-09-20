@@ -8,11 +8,7 @@ The admin can add new entries (categories + words) to the game, and delete exist
 The regular user can play the game and submit his score to the highscores board.
 
 ## Game play
-Click on the image for a youtube game play video:
-<br>
-<a href="https://www.youtube.com/watch?v=QYJOc0tfSg0">
-<img width="610" alt="hagman-thumbnail" src="https://github.com/idanc7596/Hangman/assets/48062272/589f151a-e201-4a4e-bf2c-bc3b2a2114af">
-</a>
+https://github.com/idanc7596/Hangman/assets/48062272/06d4a4aa-527c-45a4-a778-3f2dbb4aabd3
 
 ## Technology
 We used Spring technology of Java including: SpringBoot MVC (Model, View, Controller) and Thymeleaf view engine.
